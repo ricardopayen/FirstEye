@@ -151,7 +151,7 @@ function showResult() {
   const topType = Object.keys(typeScores).reduce((a, b) => typeScores[a] > typeScores[b] ? a : b);
   resultDiv.innerHTML = `<h2>You are a ${topType}.</h2>
     <p>Enter your email to receive your full Signal Profile and mythic tools.</p>
-    <form action="https://formspree.io/f/YOUR_FORM_ENDPOINT" method="POST">
+    <form action="https://formspree.io/f/mjkwgkdn" method="POST">
       <input type="email" name="email" placeholder="Your email" required><br>
       <button class="submit" type="submit">Activate</button>
     </form>`;
