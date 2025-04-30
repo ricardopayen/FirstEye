@@ -149,13 +149,15 @@ function showResult() {
   document.getElementById('quiz').style.display = 'none';
   const resultDiv = document.getElementById('result');
   const topType = Object.keys(typeScores).reduce((a, b) => typeScores[a] > typeScores[b] ? a : b);
-  resultDiv.innerHTML = `<h2>You are a ${topType}.</h2>
+ resultDiv.innerHTML = `<h2>You are a ${topType}.</h2>
   <p>Enter your email to receive your full Signal Profile and mythic tools.</p>
-  <form action="https://formspree.io/f/mjkwgkdn" method="POST">
-    <input type="hidden" name="_redirect" value="https://firsteye.xyz/thankyou.html">
+  <form action="https://formsubmit.co/firsteye.xyz@gmail.com" method="POST">
+    <input type="hidden" name="_next" value="https://www.firsteye.xyz/thankyou.html">
+    <input type="hidden" name="_captcha" value="false">
     <input type="email" name="email" placeholder="Your email" required><br>
     <button class="submit" type="submit">Activate</button>
   </form>`;
+
   resultDiv.style.display = 'block';
 }
 
