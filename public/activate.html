@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Signal Activation Quiz | First Eye Society</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Activate Your Signal | First Eye Society</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -17,6 +17,14 @@
       min-height: 100vh;
       padding: 20px;
       text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
     }
     .question {
       margin-bottom: 20px;
@@ -34,10 +42,6 @@
     }
     .answers button:hover {
       background-color: #cccccc;
-    }
-    .result {
-      display: none;
-      margin-top: 30px;
     }
     input[type=email] {
       padding: 10px;
@@ -60,9 +64,6 @@
   </style>
 </head>
 <body>
-  <a href="/">
-  <img src="/quizlogo.png" alt="First Eye Society Logo" style="width:150px; margin-bottom: 20px;">
-    </a>
 
 <h1>Activate Your Signal</h1>
 <div id="quiz"></div>
@@ -149,17 +150,15 @@ function showResult() {
   document.getElementById('quiz').style.display = 'none';
   const resultDiv = document.getElementById('result');
   const topType = Object.keys(typeScores).reduce((a, b) => typeScores[a] > typeScores[b] ? a : b);
- resultDiv.innerHTML = `<h2>You are a ${topType}.</h2>
-  <p>Enter your email to receive your full Signal Profile and spirit tech tools.</p>
-  <form action="https://formsubmit.co/956a5ddf1d8fe733ca8fbda1a3545994" method="POST">
-  <input type="hidden" name="_next" value="https://www.firsteye.xyz/thankyou.html">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_autoresponse" value="Your Signal has been received.\n\nYou may now enter the Vault:\nhttps://www.firsteye.xyz/vault.html\n\nAccess Code: firsteye369">
-  <input type="email" name="email" placeholder="Your email" required><br>
-  <button class="submit" type="submit">Activate</button>
-</form>
-`;
-
+  resultDiv.innerHTML = `<h2>You are a ${topType}.</h2>
+    <p>Enter your email to receive your full Signal Profile and access the Vault.</p>
+    <form action="https://formsubmit.co/YOUR_EMAIL_ADDRESS" method="POST">
+      <input type="hidden" name="_next" value="https://www.firsteye.xyz/thankyou.html">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_autoresponse" value="Your Signal has been received.\n\nYou may now enter the Vault:\nhttps://www.firsteye.xyz/vault.html\n\nAccess Code: firsteye777">
+      <input type="email" name="email" placeholder="Your email" required><br>
+      <button class="submit" type="submit">Activate</button>
+    </form>`;
   resultDiv.style.display = 'block';
 }
 
